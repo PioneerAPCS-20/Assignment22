@@ -1,31 +1,17 @@
 # Assignment 22
 
-In DNA strings, symbols 'A' and 'T' are complements of each other, as are 'C' and 'G'.
+The GC-content of a DNA string is given by the percentage of nucleobases in the string that are 'C' or 'G'. For example, the GC-content of "AGCTATAG" is 37.5% because 3 of the 8 nucleobases in the DNA string are 'C' or 'G' (3 / 8 = 0.375). 
 
-The reverse complement of a DNA string *s* is the string s<sup>c</sup> formed by reversing the symbols of *s*, then taking the complement of each symbol (e.g., the reverse complement of "GTCA" is "TGAC" because As and Ts swap and Gs and Cs swap).
-
-Write a program that takes a String as input, and puts the reverse compliment in a new `String`. Then print the reverse compliment strand.
-
-## Specifications
-
-One class is fine, but create a separate method besides `main`.
-
-## Hints
-
-One way to approach this is to start at the end of the given strand and work your way to the front. As you do that, take each symbol and add the complement of it to the new string. When your loop finishes (reaches the front) your new string should be the reverse complement of the original strand.
+Write a method that returns the GC-content percentage of a given DNA string.
 
 ### Sample Outputs
 
 ```
-Enter the DNA strand: AAAACCCGGT
-
-The reverse compliment is ACCGGGTTTT
+gcContent("CCACCCTCGTGGTATGGCTAGGCATTCA") -> 57.142857142857146%
 ```
 
 ```
-Enter the DNA strand: GCTTCGAGTATTGCAGGC
-
-The reverse compliment is GCCTGCAATACTCGAAGC
+gcContent("TAGCCAGAACCGTTTCTCTGA") -> 47.61904761904762%
 ```
 
 ### Grading
